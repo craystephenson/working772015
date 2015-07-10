@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="LEd-tj-CfY">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--My Green View Controller-->
+        <scene sceneID="Cw3-Jh-UgS">
+            <objects>
+                <viewController id="LEd-tj-CfY" customClass="MyGreenViewController" customModule="working772015" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aId-Yk-wzF"/>
+                        <viewControllerLayoutGuide type="bottom" id="cYL-XU-Q2S"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ieN-gz-5mB">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Gb-Fh-2Wc">
+                                <rect key="frame" x="297" y="96" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="switchButton:" destination="LEd-tj-CfY" eventType="touchUpInside" id="hUI-ob-Xac"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lTO-Pw-HSU">
+                                <rect key="frame" x="270" y="217" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="E4b-bM-BRd"/>
+                                    <constraint firstAttribute="height" constant="30" id="sZ9-Nw-sak"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tEb-Ed-qK5">
+                                <rect key="frame" x="294" y="57" width="51" height="31"/>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" red="0.57932400660000005" green="1" blue="0.61224756039999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="tEb-Ed-qK5" secondAttribute="centerX" constant="-18.5" id="5OD-aW-55K"/>
+                            <constraint firstItem="4Gb-Fh-2Wc" firstAttribute="top" secondItem="tEb-Ed-qK5" secondAttribute="bottom" constant="8" id="9hM-iI-xmZ"/>
+                            <constraint firstAttribute="centerX" secondItem="lTO-Pw-HSU" secondAttribute="centerX" constant="-18.5" id="I6U-4u-IzB"/>
+                            <constraint firstAttribute="centerY" secondItem="tEb-Ed-qK5" secondAttribute="centerY" constant="227.5" id="Ikj-hE-G2t"/>
+                            <constraint firstAttribute="centerY" secondItem="4Gb-Fh-2Wc" secondAttribute="centerY" constant="189" id="MAa-Mw-ISp"/>
+                            <constraint firstAttribute="centerY" secondItem="lTO-Pw-HSU" secondAttribute="centerY" constant="68" id="TzX-7U-6vR"/>
+                            <constraint firstAttribute="centerX" secondItem="4Gb-Fh-2Wc" secondAttribute="centerX" constant="-20" id="ycu-Ct-FHA"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Rgd-dP-gd0" appends="YES" id="Wuu-Hb-Fwl"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="mySwitch" destination="tEb-Ed-qK5" id="zRs-U0-xkr"/>
+                        <outlet property="textBox" destination="lTO-Pw-HSU" id="UWm-cl-gKR"/>
+                        <segue destination="bEu-Ud-CN2" kind="presentation" identifier="showRedSegue" id="cIT-2A-PpA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vHy-IJ-gpE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="Rgd-dP-gd0">
+                    <connections>
+                        <action selector="longPress:" destination="LEd-tj-CfY" id="tQX-dZ-yml"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-68" y="70"/>
+        </scene>
+        <!--Red View Controller-->
+        <scene sceneID="fzp-3k-8M2">
+            <objects>
+                <viewController storyboardIdentifier="RedVC" id="bEu-Ud-CN2" customClass="RedViewController" customModule="working772015" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="D2h-BW-nIH"/>
+                        <viewControllerLayoutGuide type="bottom" id="hgc-ay-xfb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JwK-e6-Hbv">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kzy-hN-m7R">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SS7-sJ-yDy">
+                                <rect key="frame" x="279" y="239" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="42" id="EqT-z2-Hta"/>
+                                    <constraint firstAttribute="height" constant="21" id="zrx-TI-2PP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="OYv-Uw-MRA">
+                                <rect key="frame" x="253" y="156" width="94" height="29"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="stepperAction:" destination="bEu-Ud-CN2" eventType="valueChanged" id="oeL-EJ-gJE"/>
+                                </connections>
+                            </stepper>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="SS7-sJ-yDy" secondAttribute="centerX" id="1UG-kN-Pnt"/>
+                            <constraint firstAttribute="centerY" secondItem="OYv-Uw-MRA" secondAttribute="centerY" constant="129.5" id="V1e-BZ-Zaw"/>
+                            <constraint firstAttribute="centerX" secondItem="OYv-Uw-MRA" secondAttribute="centerX" id="h2v-ng-cSG"/>
+                            <constraint firstAttribute="centerY" secondItem="SS7-sJ-yDy" secondAttribute="centerY" constant="50.5" id="h4Y-9C-HQb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="myUIImageView" destination="Kzy-hN-m7R" id="Fgc-zy-aaY"/>
+                        <outlet property="numberLabel" destination="SS7-sJ-yDy" id="FPb-B7-tlN"/>
+                        <outlet property="stepper" destination="OYv-Uw-MRA" id="ZMp-j9-A2U"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iPO-4m-6S7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="993-m4-h7V">
+                    <connections>
+                        <action selector="newac:" destination="bEu-Ud-CN2" id="Btn-yJ-5QQ"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="636" y="-292"/>
+        </scene>
+        <!--Blue View Controller-->
+        <scene sceneID="sh0-kL-7Mu">
+            <objects>
+                <viewController storyboardIdentifier="BlueVC" id="Pjv-OD-cyS" customClass="BlueViewController" customModule="working772015" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ifO-tt-7uW"/>
+                        <viewControllerLayoutGuide type="bottom" id="cfT-Ml-nle"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1FT-Ku-NcN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h5K-Xd-G18">
+                                <rect key="frame" x="26" y="20" width="46" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="X">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="backTapped:" destination="Pjv-OD-cyS" eventType="touchUpInside" id="ZxI-fW-faB"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J4n-nH-fZZ">
+                                <rect key="frame" x="26" y="80" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.16399958640000001" green="0.1813035526" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="blueLabel" destination="J4n-nH-fZZ" id="cga-Vf-TWe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Grd-gt-INB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="636" y="384"/>
+        </scene>
+        <!--Orange View Controller-->
+        <scene sceneID="2Bf-YM-Kqs">
+            <objects>
+                <viewController storyboardIdentifier="OrangeVC" id="CQR-LB-Dz8" customClass="OrangeViewController" customModule="working772015" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tCM-8C-ai2"/>
+                        <viewControllerLayoutGuide type="bottom" id="aH8-Ph-eL4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="x18-o3-a25">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xcO-bV-0wd">
+                                <rect key="frame" x="279" y="83" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="xcO-bV-0wd" secondAttribute="centerY" constant="206.5" id="irM-tJ-C92"/>
+                            <constraint firstAttribute="centerX" secondItem="xcO-bV-0wd" secondAttribute="centerX" id="jUj-2q-9bI"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="l6t-UF-ypD" appends="YES" id="zHc-Mf-JwM"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="orangeLabel" destination="xcO-bV-0wd" id="xHL-rL-Xbn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="41y-Dc-LtW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="l6t-UF-ypD">
+                    <connections>
+                        <action selector="orangeTapGesture:" destination="CQR-LB-Dz8" id="ms6-bS-fyx"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="636" y="1074"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" red="0.57932400660000005" green="1" blue="0.61224756039999995" alpha="1" colorSpace="calibratedRGB"/>
+</document>
